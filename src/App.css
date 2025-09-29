@@ -77,3 +77,14 @@ footer {
   text-align: center;
   margin-top: auto;
 }
+
+/* Styles pour la liste des personnages */
+li a {
+  color: #333;
+  text-decoration: none;
+}
+
+li a:hover {
+  color: #0066cc;
+  text-decoration: underline;
+}
