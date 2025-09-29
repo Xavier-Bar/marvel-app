@@ -1,5 +1,6 @@
 import AboutPage from './pages/AboutPage';
-import CharactersPage from './pages/CharactersPage';
+import CharactersPage, { charactersLoader } from './pages/CharactersPage';
+import CharacterDetailPage, { characterDetailLoader } from './pages/CharacterDetailPage';
 import ContactPage from './pages/ContactPage';
 import Layout from './Layout';
 import NotFoundPage from './pages/NotFoundPage';
@@ -13,7 +14,14 @@ const routes = [
       {
         // main page
         index: true,
-        Component: CharactersPage
+        Component: CharactersPage,
+        loader: charactersLoader
+      },
+      {
+        // character details page
+        path: "/character/:id",
+        Component: CharacterDetailPage,
+        loader: characterDetailLoader
       },
       {
         // about page
